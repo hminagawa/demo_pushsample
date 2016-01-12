@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Appiaries Push Sample</string>
+
+    <string name="tab_label_home">HOME</string>
+    <string name="tab_label_pricing">PRICING</string>
+    <string name="tab_label_login">LOGIN</string>
+    <string name="tab_label_docs">DOCS</string>
+    <string name="tab_label_faq">FAQ</string>
+
+    <string name="error_splash">Failed to register Push Notification. Restart the app.</string>
+
+</resources>
