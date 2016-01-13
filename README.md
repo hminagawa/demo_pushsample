@@ -12,3 +12,8 @@ Appiaries Developers Team
 [info@jp.appiaries.com](mailto:info@jp.appiaries.com)
 
 which basically means... **WE ARE STRICT** about the use source codes because this repository is temporally available with restricted use and for limited people...
+
+## Instruction
+
+All the setting parameters are set.
+Just build the project and will work great.

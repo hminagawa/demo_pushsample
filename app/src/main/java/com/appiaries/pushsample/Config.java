@@ -35,11 +35,6 @@ public class Config {
     /** Preference key for storing Registration ID */
     public static final String GCM_PREFERENCE = "pushsample";
 
-    /**
-     * Project Number (Sender ID)
-     *   Project Name: appiaries info
-     *   API Key: AIzaSyAc8vc8qf1KsKMLq6QmOG771fS_vJnFT_k
-     */
     public static final String SENDER_ID = "458852476803";
 
     /** Datastore ID */
