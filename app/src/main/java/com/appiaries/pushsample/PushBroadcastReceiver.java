@@ -7,11 +7,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.WakefulBroadcastReceiver;
+import android.util.Log;
 
 /**
  * BroadcastReceviver to receive Push Notification.
  */
 public class PushBroadcastReceiver extends WakefulBroadcastReceiver {
+
+    /** Tag for logs */
+    private static final String TAG = "AppiariesReg";
 
     /** Action for Opened-Message */
     public static final String ACTION_NOTIFICATION_OPEN = "appiaries.intent.action.NOTIFICATION_OPEN";
@@ -21,6 +25,9 @@ public class PushBroadcastReceiver extends WakefulBroadcastReceiver {
      */
     @Override
     public void onReceive(Context context, Intent intent) {
+
+        Log.i(TAG, "Receiving push notification!!");
+
         // Notification Settings
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
         // Here is our icon.

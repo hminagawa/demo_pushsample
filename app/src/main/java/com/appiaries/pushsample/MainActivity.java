@@ -35,6 +35,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.JavascriptInterface;
@@ -60,6 +61,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     /** Custom View */
     private CustomWebViewClient mWebViewClient;
+
+    /** Tag for logs */
+    private static final String TAG = "AppiariesReg";
 
     /**
      * {@inheritDoc}
@@ -106,7 +110,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 	// Upon receiving the notification, show the content of the notification.
         final Intent intent = getIntent();
+        Log.i(TAG, "intent action: " + intent.getAction());
         if (intent != null && PushBroadcastReceiver.ACTION_NOTIFICATION_OPEN.equals(intent.getAction())) {
+            Log.i(TAG, "Notification tapped.");
             mWebView.setVisibility(View.GONE);
             mNotificationInfoView.setVisibility(View.VISIBLE);
             final String title = intent.getStringExtra(Config.NOTIFICATION_KEY_TITLE);
@@ -114,6 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             ((TextView) findViewById(R.id.notification_title)).setText(title);
             ((TextView) findViewById(R.id.notification_message)).setText(message);
         } else {
+            Log.i(TAG, "WebView becoming visible.");
             mWebView.loadUrl(Config.TAB_URL_HOME);
             mWebView.setVisibility(View.VISIBLE);
             mNotificationInfoView.setVisibility(View.GONE);

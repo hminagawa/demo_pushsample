@@ -42,6 +42,7 @@
         android:launchMode="singleTask"
         android:noHistory="true"
         android:screenOrientation="portrait"
+        android:exported="true"
         android:theme="@android:style/Theme.Translucent"/>
     <!-- Web View -->
     <activity
